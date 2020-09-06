@@ -1,6 +1,6 @@
 {
   "homepage": "http://rahulcs178.github.io/react-budget-calculator-basic",
-  "name": "person-list",
+  "name": "Budget-Calculator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
