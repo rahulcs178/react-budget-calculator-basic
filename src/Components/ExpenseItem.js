@@ -1,5 +1,6 @@
 import React from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
+import { BiRupee } from "react-icons/bi";
 
 const ExpenseItem = ({ expense, handleDelete, handleEdit }) => {
   const { id, charge, amount } = expense;
@@ -7,7 +8,9 @@ const ExpenseItem = ({ expense, handleDelete, handleEdit }) => {
     <li className="item">
       <div className="info">
         <span className="expense">{charge}</span>
-        <span className="amount">INR {amount}</span>
+        <span className="amount">
+          <BiRupee /> {amount}
+        </span>
       </div>
       <div>
         <button

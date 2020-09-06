@@ -4,6 +4,7 @@ import ExpenseList from "./Components/ExpenseList";
 import ExpenseForm from "./Components/ExpenseForm";
 import Alert from "./Components/Alert";
 import { v4 as uuidv4 } from "uuid";
+import { BiRupee } from "react-icons/bi";
 // const initialsExpenses = [
 //   { id: uuidv4(), charge: "rent", amount: 1600 },
 //   { id: uuidv4(), charge: "car repair", amount: 400 },
@@ -92,6 +93,9 @@ function App() {
     console.log(tempExpenses);
     setExpenses(tempExpenses);
     handleAlert({ type: "danger", text: "Item Deleted" });
+    setCharge("");
+    setAmount("");
+    setEdit(false);
   };
 
   return (
@@ -118,7 +122,7 @@ function App() {
       <h1>
         total spending :{" "}
         <span className="total">
-          INR{" "}
+          <BiRupee />{" "}
           {expenses.reduce((acc, curr) => {
             return (acc += parseInt(curr.amount));
           }, 0)}
